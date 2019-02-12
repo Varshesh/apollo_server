@@ -8,3 +8,55 @@ Steps to run the project:
 Note: 
 This server is only for example purpose.
 userData.json file is used for CRUD operations.
+
+
+#Example Queries
+
+Get All Users
+---------------
+{	
+  users{
+    id
+    first_name
+  }
+}
+---------------
+
+Get User By Id
+---------------
+{	
+  userById(id:2){
+    first_name
+    age
+  }
+}
+---------------
+
+Create User
+---------------
+mutation{	
+  createUser(first_name:"Sumer",last_name:"Saraf", gender:"M", age: 25){
+    id,
+	first_name
+  }
+}
+---------------
+
+Update User
+---------------
+mutation{	
+  updateUser(id: 1, first_name:"Sumeer",last_name:"Saraf", gender:"M", age: 25){
+    first_name
+  }
+}
+---------------
+
+Delete User
+---------------
+mutation{	
+  deleteUser(id: 2){
+    first_name
+  }
+}
+---------------
+
